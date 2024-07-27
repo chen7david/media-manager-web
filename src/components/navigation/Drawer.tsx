@@ -15,7 +15,7 @@ export const Drawer = (props: IDrawerProps) => {
           'transform transition-all duration-300 ease-in-out',
           className,
           { 'translate-x-0': show },
-          { '-translate-x-full w-0': !show },
+          { '-translate-x-full block': !show },
         )}
         {...restProps}
       >
