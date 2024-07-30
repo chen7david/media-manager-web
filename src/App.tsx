@@ -4,7 +4,6 @@ import { MainContainer } from './components/layout/MainContainer'
 import { Router } from './pages/router/Router'
 import { useAtom } from 'jotai'
 import { drawerOpenAtom } from './store/navigation.store'
-import { Home } from './pages/home/Home'
 
 function App() {
   const [isDrawerOpen, setIsDrawerOpen] = useAtom(drawerOpenAtom)
