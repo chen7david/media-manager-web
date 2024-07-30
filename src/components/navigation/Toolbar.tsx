@@ -13,18 +13,16 @@ export const Toolbar = ({
   return (
     <div
       className={cn(
-        'bg-white h-20 sticky top-0 left-0 right-0 flex flex-col justify-center',
+        'z-10 sticky top-0 h-16 flex items-center gap-2 px-4',
         className,
       )}
       {...rest}
     >
       <Button
-        type="text"
+        type="primary"
+        className="md:hidden"
         icon={isDrawerOpen ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
         onClick={() => setIsDrawerOpen(!isDrawerOpen)}
-        style={{
-          color: 'white',
-        }}
       />
       {children}
     </div>

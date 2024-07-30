@@ -1,12 +1,12 @@
 import cn from 'classnames'
 
-export const MainContainer = ({
+export const PageContainer = ({
   className,
   children,
   ...restProps
 }: React.HTMLAttributes<HTMLDivElement>) => {
   return (
-    <div className={cn('flex-1 overflow-y-auto', className)} {...restProps}>
+    <div className={cn('m-5', className)} {...restProps}>
       {children}
     </div>
   )
