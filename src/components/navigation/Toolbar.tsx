@@ -1,4 +1,4 @@
-import { Button } from 'antd'
+import { Button, Form } from 'antd'
 import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons'
 import cn from 'classnames'
 import { useAtom } from 'jotai'
@@ -13,17 +13,22 @@ export const Toolbar = ({
   return (
     <div
       className={cn(
-        'z-10 sticky top-0 h-16 flex items-center gap-2 px-4',
+        'z-10 flex items-center sticky top-0 h-16 md:pr-4 md:pl-0 px-4',
         className,
       )}
       {...rest}
     >
-      <Button
-        type="primary"
-        className="md:hidden"
-        icon={isDrawerOpen ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-        onClick={() => setIsDrawerOpen(!isDrawerOpen)}
-      />
+      <Form layout="inline">
+        <Form.Item>
+          <Button
+            className="md:hidden"
+            size="large"
+            type="primary"
+            icon={isDrawerOpen ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
+            onClick={() => setIsDrawerOpen(!isDrawerOpen)}
+          />
+        </Form.Item>
+      </Form>
       {children}
     </div>
   )

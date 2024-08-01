@@ -1,4 +1,4 @@
-import { Button, Input } from 'antd'
+import { Button, Input, Form } from 'antd'
 import { PageContainer } from '../../components/layout/PageContainer'
 import { Toolbar } from '../../components/navigation/Toolbar'
 import { SearchOutlined, UserAddOutlined } from '@ant-design/icons'
@@ -8,17 +8,26 @@ export const Home = () => {
   return (
     <>
       <Toolbar className="bg-blue-600">
-        <div id="search" className="flex gap-2">
-          <Input
-            allowClear
-            prefix={<SearchOutlined />}
-            style={{ width: 200 }}
-          />
-          <Button type="primary">Search</Button>
-        </div>
+        <Form layout="inline">
+          <Form.Item>
+            <Input
+              size="large"
+              allowClear
+              prefix={<SearchOutlined />}
+              style={{ width: 200 }}
+            />
+          </Form.Item>
+          <Form.Item>
+            <Button size="large" type="primary">
+              Search
+            </Button>
+          </Form.Item>
+        </Form>
+
         <div id="actions" className="flex-1 flex justify-end">
           <div className="">
             <Button
+              size="large"
               type="primary"
               className=""
               icon={<UserAddOutlined />}
