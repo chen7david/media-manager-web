@@ -17,13 +17,7 @@ export const Home = () => {
               style={{ width: 200 }}
             />
           </Form.Item>
-          <Form.Item>
-            <Button size="large" type="primary">
-              Search
-            </Button>
-          </Form.Item>
         </Form>
-
         <div id="actions" className="flex-1 flex justify-end">
           <div className="">
             <Button
@@ -35,7 +29,8 @@ export const Home = () => {
           </div>
         </div>
       </Toolbar>
-      <PageContainer className="flex flex-col gap-2">
+
+      <PageContainer className="flex flex-col gap-4">
         {cards.map((_, index) => (
           <div className="bg-white rounded p-5">
             <h1>{index}</h1>
